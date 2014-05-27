@@ -1,0 +1,27 @@
+<div class="container bs-docs-section">
+
+    <div class="page-header">
+        <h1>{{award}}</h1>
+        <h2>{{category}}</h2>
+    </div>
+    <div class="row">
+        <p>{{description}}</p>
+    </div>
+
+    <!-- Foreach Nomination Display -->
+    {{#each nomination}}
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>{{first_name}} {{last_name}}</h4>
+            <!-- TODO: Picture of Nominee -->
+        </div>
+        <div class="col-lg-6">
+            <div class="well bs-component">{{description}}</div>
+        </div>
+        <div class="col-lg-6">
+            {{#each nomination.recipient}} <p> {{this.name}}</p> {{/each}}
+        </div>
+    </div>
+    {{/each}}
+
+</div>
